@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yassin Group LLC | Cybersecurity and federal compliance</title>
+<meta name="description" content="Yassin Group LLC is a Northern Virginia cybersecurity firm specializing in malware analysis, security assessment tooling, cloud security architecture, and FedRAMP and NIST RMF authorization.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --paper: #F4F6F8;
+    --surface: #FFFFFF;
+    --ink: #102033;
+    --muted: #556274;
+    --rule: #CBD3DC;
+    --accent: #8A2D2B;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --paper: #0E1622;
+      --surface: #142031;
+      --ink: #E6ECF2;
+      --muted: #98A6B6;
+      --rule: #26364A;
+      --accent: #E39A93;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 1.0625rem/1.6 var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+  a:hover { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Header */
+  .site-header { border-bottom: 1px solid var(--rule); }
+  .site-header .wrap {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 1rem; padding-top: 1.25rem; padding-bottom: 1.25rem; flex-wrap: wrap;
+  }
+  .wordmark { font: 600 1.25rem/1 var(--serif); text-decoration: none; letter-spacing: 0.01em; }
+  .wordmark span { font-family: var(--sans); font-weight: 500; font-size: 0.8125rem; color: var(--muted); margin-left: 0.4rem; }
+  nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; font-size: 0.9375rem; }
+  nav a { text-decoration: none; color: var(--muted); }
+  nav a:hover { color: var(--ink); }
+
+  /* Hero */
+  .hero { padding: 6rem 0 5rem; }
+  .hero h1 {
+    font: 400 clamp(2.4rem, 5.5vw, 4.25rem)/1.08 var(--serif);
+    letter-spacing: -0.015em;
+    margin: 0 0 1.75rem;
+    max-width: 17ch;
+  }
+  .hero p { max-width: 38rem; color: var(--muted); font-size: 1.1875rem; margin: 0 0 2.25rem; }
+  .button {
+    display: inline-block; padding: 0.8rem 1.4rem;
+    background: var(--ink); color: var(--paper);
+    text-decoration: none; font-weight: 500; border-radius: 3px;
+  }
+  .button:hover { background: var(--accent); color: var(--paper); }
+
+  /* Sections */
+  section { padding: 4.5rem 0; border-top: 1px solid var(--rule); }
+  .section-head { display: grid; grid-template-columns: 11rem 1fr; gap: 2rem; margin-bottom: 2.5rem; }
+  .section-head h2 { grid-column: 2; font: 400 2rem/1.2 var(--serif); margin: 0; }
+  .section-head p { grid-column: 2; margin: 0.75rem 0 0; color: var(--muted); max-width: 38rem; }
+
+  /* Services: control references sit in the margin column */
+  .services { margin: 0; padding: 0; list-style: none; }
+  .service {
+    display: grid; grid-template-columns: 11rem 1fr; gap: 2rem;
+    padding: 1.75rem 0; border-top: 1px solid var(--rule);
+  }
+  .service:first-child { border-top: 0; padding-top: 0; }
+  .controls { margin: 0; padding: 0; list-style: none; font-size: 0.875rem; color: var(--accent); font-weight: 500; font-variant-numeric: tabular-nums; line-height: 1.9; }
+  .service h3 { font: 600 1.25rem/1.3 var(--serif); margin: 0 0 0.5rem; }
+  .service p { margin: 0; max-width: 40rem; color: var(--muted); }
+  .legend { grid-column: 2; font-size: 0.875rem; color: var(--muted); margin-top: 2rem; max-width: 40rem; }
+
+  /* Approach */
+  .approach { display: grid; grid-template-columns: 11rem 1fr; gap: 2rem; }
+  .approach-body { grid-column: 2; max-width: 40rem; }
+  .approach-body p { margin: 0 0 1.25rem; font: 400 1.1875rem/1.65 var(--serif); }
+
+  /* Principal */
+  .principal { display: grid; grid-template-columns: 11rem 1fr; gap: 2rem; }
+  .principal-body { grid-column: 2; max-width: 40rem; }
+  .principal-body h3 { font: 600 1.375rem/1.3 var(--serif); margin: 0; }
+  .principal-body .role { color: var(--muted); margin: 0.25rem 0 1.25rem; }
+  .creds { list-style: none; padding: 0; margin: 1.5rem 0 0; border-top: 1px solid var(--rule); }
+  .creds li { padding: 0.75rem 0; border-bottom: 1px solid var(--rule); }
+
+  /* Contact */
+  .contact { display: grid; grid-template-columns: 11rem 1fr; gap: 2rem; }
+  .contact-body { grid-column: 2; }
+  .contact-body a.email { font: 400 clamp(1.5rem, 3.5vw, 2.25rem)/1.3 var(--serif); word-break: break-word; }
+  .contact-body p { color: var(--muted); max-width: 38rem; }
+
+  footer { border-top: 1px solid var(--rule); padding: 2rem 0 3rem; font-size: 0.875rem; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    .hero { padding: 4rem 0 3.5rem; }
+    .section-head, .service, .approach, .principal, .contact { grid-template-columns: 1fr; gap: 0.75rem; }
+    .section-head h2, .section-head p, .legend, .approach-body, .principal-body, .contact-body { grid-column: 1; }
+    .controls { display: flex; flex-wrap: wrap; gap: 0 1rem; }
+    nav ul { gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="#top">Yassin Group <span>LLC</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#principal">Principal</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+
+    <div class="hero">
+      <h1>Security engineering from the control catalog to the binary.</h1>
+      <p>Yassin Group LLC is a Northern Virginia cybersecurity firm. We analyze malware, build security assessment tooling, and take cloud systems through FedRAMP and NIST RMF authorization.</p>
+      <a class="button" href="mailto:elias.yassin@yassingroupllc.com">Email us</a>
+    </div>
+
+    <section id="services" aria-labelledby="services-title">
+      <div class="section-head">
+        <h2 id="services-title">Services</h2>
+        <p>Each service is listed with the NIST SP 800-53 control families it supports, so compliance teams can see where our work lands in their authorization package.</p>
+      </div>
+
+      <ul class="services">
+        <li class="service">
+          <ul class="controls" aria-label="Related controls"><li>SI-3</li><li>SI-4</li><li>IR-4</li></ul>
+          <div>
+            <h3>Malware analysis and reverse engineering</h3>
+            <p>Static and dynamic analysis of malicious samples in isolated lab environments. We extract indicators of compromise and turn findings into detection rules your team can deploy.</p>
+          </div>
+        </li>
+        <li class="service">
+          <ul class="controls" aria-label="Related controls"><li>CA-2</li><li>CA-7</li><li>RA-5</li></ul>
+          <div>
+            <h3>Security assessment and tooling</h3>
+            <p>Control assessments against NIST SP 800-53, plus purpose-built tooling that automates evidence collection, scan analysis, and continuous monitoring.</p>
+          </div>
+        </li>
+        <li class="service">
+          <ul class="controls" aria-label="Related controls"><li>CA-5</li><li>CA-6</li><li>PL-2</li></ul>
+          <div>
+            <h3>FedRAMP and NIST RMF authorization</h3>
+            <p>Hands-on support from system security plan through POA&amp;M management and authorization, drawn from three FedRAMP authorizations including FedRAMP High.</p>
+          </div>
+        </li>
+        <li class="service">
+          <ul class="controls" aria-label="Related controls"><li>AC-2</li><li>AC-6</li><li>SC-7</li></ul>
+          <div>
+            <h3>Cloud security architecture and IAM governance</h3>
+            <p>AWS security architecture reviews and identity governance programs that enforce least privilege and hold up under audit.</p>
+          </div>
+        </li>
+        <li class="service">
+          <ul class="controls" aria-label="Related frameworks"><li>AI RMF</li></ul>
+          <div>
+            <h3>AI governance and agentic system security</h3>
+            <p>Governance and security review for AI systems and autonomous agents, aligned to the NIST AI Risk Management Framework.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="approach" aria-labelledby="approach-title">
+      <div class="section-head">
+        <h2 id="approach-title">How we work</h2>
+      </div>
+      <div class="approach">
+        <div class="approach-body">
+          <p>Every engagement is scoped in writing before work begins. We test only systems we own or have explicit written authorization to test.</p>
+          <p>Malware samples are handled exclusively in isolated analysis environments, never on production or client networks.</p>
+          <p>Findings arrive as finished deliverables: reports, detection content, and remediation guidance mapped to the controls your auditors will ask about.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="principal" aria-labelledby="principal-title">
+      <div class="section-head">
+        <h2 id="principal-title">Principal</h2>
+      </div>
+      <div class="principal">
+        <div class="principal-body">
+          <h3>Elias Yassin</h3>
+          <p class="role">Founder and principal</p>
+          <p>Elias brings more than twelve years of enterprise cloud and cybersecurity work for federal and commercial clients. His practice sits where compliance meets engineering: he has led systems through authorization and he builds the software that makes security work repeatable.</p>
+          <ul class="creds">
+            <li>Certified Information Security Manager (CISM)</li>
+            <li>Active Public Trust clearance</li>
+            <li>Three FedRAMP authorizations, including FedRAMP High</li>
+            <li>NIST RMF and NIST SP 800-53 control assessment</li>
+            <li>AWS security architecture and IAM governance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title">Contact</h2>
+      </div>
+      <div class="contact">
+        <div class="contact-body">
+          <a class="email" href="mailto:elias.yassin@yassingroupllc.com">elias.yassin@yassingroupllc.com</a>
+          <p>For engagements, partnerships, or security matters, email us directly. We reply within two business days.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Yassin Group LLC. Northern Virginia.</div>
+</footer>
+
+</body>
+</html>
